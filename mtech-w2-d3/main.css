@@ -1,7 +1,15 @@
 :root{
-    --myYellow:#FFBE0B;
-    --myOrange:#FB5607;
-    --myPink:#FF006E;
-    --myPurple:#8338EC;
-    --mtBlue:#3A86FF;
+    --darkerBlue: #77A0A6ff;
+    --lighterBlue: #BACFD5ff;
+    --lighterGreen: #A3C5B4ff;
+    --myYellow: #D5BA89ff;
+    --rosy-brown: #C6A8A8ff;
+}
+
+*{
+    background-color: var(--myYellow);
+}
+
+h1{
+    color:var(--darkerBlue)
 }
