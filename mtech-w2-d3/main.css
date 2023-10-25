@@ -1,15 +1,43 @@
-:root{
-    --darkerBlue: #77A0A6ff;
-    --lighterBlue: #BACFD5ff;
-    --lighterGreen: #A3C5B4ff;
-    --myYellow: #D5BA89ff;
-    --rosy-brown: #C6A8A8ff;
+:root {
+  --navyBlue:#1d3557;
+  --darkerBlue: #77a0a6ff;
+  --lighterBlue: #bacfd5ff;
+  --lighterGreen: #a3c5b4ff;
+  --myYellow: #d5ba89ff;
+  --rosy-brown: #c6a8a8ff;
 }
 
-*{
-    background-color: var(--myYellow);
+* {
+  margin: 0;
 }
 
-h1{
-    color:var(--darkerBlue)
+body {
+  background-color: var(--myYellow);
+}
+
+ul {
+  background-color: var(--darkerBlue);
+  padding: 2rem;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 2rem;
+}
+
+h1 {
+  color:var(--navyBlue);
+  text-shadow: 3px 3px 3px var(--darkerBlue), 1rem 1rem 1rem var(--lighterBlue),1rem 1rem 1rem var(--rosy-brown);
+  font-family: "Fjalla One";
+  text-align: center;
+  font-size: 40px;
+  padding-top: 1rem;
+}
+
+.content-area {
+  background: url("andrew-ridley-jR4Zf-riEjI-unsplash.jpg") top center;
+  height: 100vh;
+  width: auto;
 }
