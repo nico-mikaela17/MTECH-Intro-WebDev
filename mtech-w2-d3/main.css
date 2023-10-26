@@ -21,20 +21,46 @@ ul {
   text-align: center;
 }
 
-li {
+li, li a {
   list-style-type: none;
   display: inline;
   padding: 2rem;
+  font-size: 24px;
+  font-family: "Fjalla One";
+  color:var(--navyBlue);
+  text-decoration: none;
+}
+
+
+li .active{
+  background: var(--navyBlue);
+  margin-top: 0;
+  color: white;
+  padding: 2rem;
+}
+
+li:hover{
+  text-shadow: 3px 3px 3px var(--lighterGreen), 1rem 1rem 1rem var(--lighterBlue),.2rem .5rem .5rem var(--rosy-brown);
+
 }
 
 h1 {
-  color:var(--navyBlue);
-  text-shadow: 3px 3px 3px var(--darkerBlue), 1rem 1rem 1rem var(--lighterBlue),1rem 1rem 1rem var(--rosy-brown);
+  color:white;
+  text-shadow: 3px 3px 3px var(--darkerBlue), 1rem 1rem 1rem var(--navyBlue);
   font-family: "Fjalla One";
   text-align: center;
   font-size: 40px;
   padding-top: 1rem;
 }
+
+  h3 {
+    color:white;
+    text-shadow: 3px 3px 3px var(--darkerBlue), 1rem 1rem 1rem var(--navyBlue);
+    font-family: "Fjalla One";
+    text-align: center;
+    font-size: 24px;
+    padding-top: 1rem;
+  }
 
 .content-area {
   background: url("andrew-ridley-jR4Zf-riEjI-unsplash.jpg") top center;
