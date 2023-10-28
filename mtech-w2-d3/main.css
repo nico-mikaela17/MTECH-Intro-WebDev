@@ -1,0 +1,69 @@
+:root {
+  --navyBlue:#1d3557;
+  --darkerBlue: #77a0a6ff;
+  --lighterBlue: #bacfd5ff;
+  --lighterGreen: #a3c5b4ff;
+  --myYellow: #d5ba89ff;
+  --rosy-brown: #c6a8a8ff;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: var(--myYellow);
+}
+
+ul {
+  background-color: var(--darkerBlue);
+  padding: 2rem;
+  text-align: center;
+}
+
+li, li a {
+  list-style-type: none;
+  display: inline;
+  padding: 2rem;
+  font-size: 24px;
+  font-family: "Fjalla One";
+  color:var(--navyBlue);
+  text-decoration: none;
+}
+
+
+li .active{
+  background: var(--navyBlue);
+  margin-top: 0;
+  color: white;
+  padding: 2rem;
+}
+
+li:hover{
+  text-shadow: 3px 3px 3px var(--lighterGreen), 1rem 1rem 1rem var(--lighterBlue),.2rem .5rem .5rem var(--rosy-brown);
+
+}
+
+h1 {
+  color:white;
+  text-shadow: 3px 3px 3px var(--darkerBlue), 1rem 1rem 1rem var(--navyBlue);
+  font-family: "Fjalla One";
+  text-align: center;
+  font-size: 40px;
+  padding-top: 1rem;
+}
+
+  h3 {
+    color:white;
+    text-shadow: 3px 3px 3px var(--darkerBlue), 1rem 1rem 1rem var(--navyBlue);
+    font-family: "Fjalla One";
+    text-align: center;
+    font-size: 24px;
+    padding-top: 1rem;
+  }
+
+.content-area {
+  background: url("andrew-ridley-jR4Zf-riEjI-unsplash.jpg") top center;
+  height: 100vh;
+  width: auto;
+}
