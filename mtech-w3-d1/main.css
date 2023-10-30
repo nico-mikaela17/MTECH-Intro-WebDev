@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffcad4;
+  font-family: "Quicksand";
+}
+
+nav {
+  background-color: #d86778;
+  color: white;
+  height: 55px;
+}
+h4 {
+  float: left;
+  margin: 1rem 3rem;
+  font-size: 24px;
+}
+ul {
+  float: right;
+  margin-right: 1rem;
+}
+
+li {
+  display: inline;
+  padding: 1rem;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+card {
+  float: left;
+  width: 300px;
+  margin: 2rem 1rem;
+  padding: 2rem;
+  background-color: white;
+  border: 3px solid #d86778;
+  border-radius: 7px;
+}
+
+button {
+  width: 90%;
+  text-align: center;
+  margin: 0 1rem;
+  background-color: #d86778;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  height: 36px;
+  font-size: 16px;
+}
