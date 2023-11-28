@@ -1,6 +1,3 @@
-
-$('#button').append('<button>Dark Mode</button>')
-
 const storeItems = [
   {
     name: "TV",
@@ -70,3 +67,30 @@ const storeItems = [
   },
 ];
 
+function populateRows() {
+  for (let i = 0; i < storeItems.length; i++) {
+    let product = storeItems[i];
+    let row = $("<tr>");
+
+    // Check if the item is in stock
+    if (product.inStock) {
+      row
+        .addClass("inStock")
+        .append(
+          `<p class="price"> $ ${product.price}</p> <p class="productName"> $ ${product.name}</p> <p class="details"> $ ${product.details}</p>`);
+    } else {
+      row.addClass("notInStock");
+    }
+    $("#table").append(row);
+  }
+}
+populateRows();
+
+//dark mode
+$("button").append("Toggle Dark Mode");
+$("button").click(function () {
+  $("#contentContainer").toggleClass("darkMode");
+  $("#title").toggleClass("darkMode");
+  $("#table").toggleClass("darkMode");
+  console.log($("#contentContainer").class);
+});
