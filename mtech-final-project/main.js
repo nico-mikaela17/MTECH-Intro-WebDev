@@ -13,6 +13,21 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  let yourNameAndComment = $(".yourNameAndComment");
+  let commentOffset = yourNameAndComment.offset().bottom;
+
+  $(window).scroll(function () {
+    let scrollPos = $(window).scrollTop();
+
+    if (scrollPos >= commentOffset) {
+      yourNameAndComment.addClass("fixedInput");
+    } else {
+      yourNameAndComment.removeClass("fixedInput");
+    }
+  });
+});
+
 $("#submitBtn").on("click", function addNewPost() {
   let newPost = $(
     `<div class="subComment">
