@@ -13,15 +13,13 @@ $(document).ready(function () {
   });
 });
 
-
-let submitCommentBtn = $("#submitBtn");
-submitCommentBtn.on("click", function addNewPost(username, postContent) {
+$("#submitBtn").on("click", function addNewPost() {
   let newPost = $(
     `<div class="subComment">
      <i class="fa-regular fa-user"></i>
      <div class="nameAndCommentArea">
-       <p class="username">${$('#displayName').val()}</p>
-       <h5>${$('#comment').val()}</h5>
+       <p class="username">${$("#displayName").val()}</p>
+       <h5>${$("#comment").val()}</h5>
      </div>
      <div class="actionItems">
        <p>Edit</p>
@@ -31,4 +29,9 @@ submitCommentBtn.on("click", function addNewPost(username, postContent) {
   );
 
   $(".commentContainer").prepend(newPost);
+});
+
+$("#delete").on("click", function () {
+  console.log('it works')
+  $(".subComment").remove($this);
 });

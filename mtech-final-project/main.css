@@ -83,13 +83,17 @@
   background-color: rgb(247, 247, 247);
   display: flex;
   padding: 1rem 1rem 0.5rem 1rem;
+  align-self: flex-start;
 }
 
-.actionItems p {
+.actionItems button {
   background-color: rgb(247, 247, 247);
   padding: 0 1rem 0 0;
   color: rgb(169, 215, 255);
   margin-left: auto;
+  border: none;
+  font-size: 18px;
+
 }
 
 .yourNameAndComment {
