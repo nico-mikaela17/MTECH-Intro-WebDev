@@ -13,32 +13,17 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
-  let yourNameAndComment = $(".yourNameAndComment");
-  let commentOffset = yourNameAndComment.offset().bottom;
-
-  $(window).scroll(function () {
-    let scrollPos = $(window).scrollTop();
-
-    if (scrollPos >= commentOffset) {
-      yourNameAndComment.addClass("fixedInput");
-    } else {
-      yourNameAndComment.removeClass("fixedInput");
-    }
-  });
-});
-
 $("#submitBtn").on("click", function addNewPost() {
   let newPost = $(
     `<div class="subComment">
      <i class="fa-regular fa-user"></i>
      <div class="nameAndCommentArea">
        <p class="username">${$("#displayName").val()}</p>
-       <h5>${$("#comment").val()}</h5>
+       <h5 class="comment">${$("#comment").val()}</h5>
      </div>
      <div class="actionItems">
-       <p>Edit</p>
-       <p>Delete</p>
+       <button id="edit">Edit</button>
+       <button id="delete">Delete</button>
      </div>
    </div>`
   );
@@ -46,7 +31,40 @@ $("#submitBtn").on("click", function addNewPost() {
   $(".commentContainer").prepend(newPost);
 });
 
-$("#delete").on("click", function () {
-  console.log('it works')
-  $(".subComment").remove($this);
+//Delete individual comments
+$(document).on("click", "#delete", function () {
+  console.log("Delete button clicked");
+  $(this).closest(".subComment").remove();
+});
+
+//Edit in each comment
+$(document).ready(function() {
+  $(document).on("click", "#edit", function () {
+    console.log('edit button was clicked')
+    let commentContainer = $(this).closest(".subComment");
+    let commentText = commentContainer.find(".comment");
+
+    // Replace the comment text with a form
+    let editForm = $(
+      "<form class='edit-comment-form'><input type='text' class='edit-comment-input' value='" +
+        commentText.text() +
+        "'>" +
+        "<button type='submit' class='save'>Save</button></form>"
+    );
+
+    commentText.replaceWith(editForm);
+
+    // Add a submit event handler for the form
+    editForm.on("submit", function (e) {
+      e.preventDefault(); // Prevent default form submission
+
+      // Update the comment text with the new value from the input field
+      let newCommentText = editForm.find(".edit-comment-input").val();
+      commentText.text(newCommentText);
+
+      // Restore the comment text element and remove the form
+      $(this).closest($('.nameAndCommentArea')).append(commentText);
+      editForm.remove();
+    });
+  });
 });
