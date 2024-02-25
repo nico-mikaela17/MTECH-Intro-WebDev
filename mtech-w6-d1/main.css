@@ -1,0 +1,60 @@
+* {
+  font-family: "open sans";
+  text-align: left;
+
+}
+
+body {
+  background-color: rgb(244, 244, 244);
+}
+
+#contentContainer {
+  width: 900px;
+  display: block;
+  margin: 0 auto;
+}
+
+.darkMode {
+  background-color: #2b2b2b;
+}
+
+.darkMode h1 {
+  color: white;
+}
+
+button {
+  padding: 10px;
+  border-radius: 3px;
+}
+
+tr {
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 24px;
+  width: 800px;
+  background-color: white;
+  padding: 10px;
+  margin: 10px 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.darkMode tr{
+  background-color: #565656;
+  color: white;
+}
+
+.darkMode button{
+  background-color: #565656;
+  color: white;
+}
+p {
+  align-self: center;
+  text-align: left;
+}
+
+.notInStock {
+  display: none;
+}

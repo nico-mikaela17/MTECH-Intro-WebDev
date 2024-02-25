@@ -1,0 +1,17 @@
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1000px;
+  justify-content: center;
+}
+.child {
+  background-color: rgb(43, 43, 43);
+  height: 150px;
+  width: 150px;
+  margin: 2rem;
+  display: flex;
+}
+.selected{
+  background-color: gray;
+}

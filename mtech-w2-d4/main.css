@@ -1,0 +1,33 @@
+* {
+  font-family: "Titillium Web";
+}
+
+form {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 3px;
+  position: absolute;
+  padding: 1rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+div {
+  display: block;
+  padding-bottom: 2rem;
+}
+
+input{
+  margin-left: 2px;
+  border:1px solid gray;
+  border-radius: 3px;
+}
+
+#submitBtn{
+  width: 100%;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
